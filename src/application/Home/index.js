@@ -16,7 +16,7 @@ function Home(props) {
         <span className="iconfont menu">&#xe65c;</span>
         <span className="title">网易云音乐</span>
         <span className="iconfont search">&#xe62b;</span>
-      </Top>
+      </Top>   
       <Tab>
         <NavLink to="/recommend" activeClassName="selected"><TabItem><span > 推荐 </span></TabItem></NavLink>
         <NavLink to="/singers" activeClassName="selected"><TabItem><span > 歌手 </span></TabItem></NavLink>

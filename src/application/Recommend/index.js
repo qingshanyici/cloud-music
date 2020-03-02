@@ -17,6 +17,7 @@ function Recommend (props){
     //eslint-disable-next-line
   }, []);
 
+  //连接redux
   const bannerListJS = bannerList ? bannerList.toJS () : [];
   const recommendListJS = recommendList ? recommendList.toJS () :[];
 

@@ -6,6 +6,7 @@ const defaultState = fromJS ({
   recommendList: [],
 });
 
+//定义reducer函数，函数名就是reducer
 export default (state = defaultState, action) => {
     switch (action.type) {
       case actionTypes.CHANGE_BANNER:
@@ -16,3 +17,5 @@ export default (state = defaultState, action) => {
         return state;
     }
   }
+
+ 

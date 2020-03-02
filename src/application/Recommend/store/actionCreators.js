@@ -1,9 +1,9 @@
-//actionCreators.js
+//actionCreators.js, 编写具体的action
 import * as actionTypes from './constants';
 import { fromJS } from 'immutable';// 将 JS 对象转换成 immutable 对象
 import { getBannerRequest, getRecommendListRequest } from '../../../api/request';
 
-export const changeBannerList = (data) => ({
+export const changeBannerList = (data) => ({ //为什么要加小括号， 这并不是一个箭头函数
   type: actionTypes.CHANGE_BANNER,
   data: fromJS (data)
 });
@@ -22,6 +22,7 @@ export const getBannerList = () => {
     }) 
   }
 };
+
 
 export const getRecommendList = () => {
   return (dispatch) => {
