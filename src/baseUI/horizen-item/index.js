@@ -19,6 +19,7 @@ const List = styled.div`
     vertical-align: middle;
   }  
 `
+
 const ListItem = styled.span`
   flex: 0 0 auto;
   font-size: ${style ["font-size-m"]};
@@ -49,27 +50,24 @@ useEffect (() => {
 }, []);
 
   return (
-    <div>
-      <Scroll direction={"horizental"}>
-        <div ref={Category}>
-          <List>
+    <Scroll direction={"horizental"}>
+      <div ref={Category}>
+        <List>
             <span>{title}</span>
             {
-              list.map((item) => {
+              list.map((item,index)=>{
                 return (
-                  <ListItem
-                    key={item.key}
-                    className={`${oldVal === item.key ? 'selected' : ''}`}
-                    onClick={() => handleClick(item.key)}>
+                  <ListItem key={index}
+                            onClick={()=>handleClick(item.key)}
+                            className={`${item.key == oldVal ? 'selected' : ''}`}>
                     {item.name}
                   </ListItem>
                 )
               })
             }
-          </List>
-        </div>
-      </Scroll>
-    </div>
+        </List>
+      </div>
+    </Scroll>
   )
 }
 

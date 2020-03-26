@@ -8,7 +8,6 @@ import { Content } from './style';
 
 function Recommend (props){
   const { bannerList, recommendList } = props;
-
   const { getBannerDataDispatch, getRecommendListDataDispatch } = props;
 
   useEffect (() => {
